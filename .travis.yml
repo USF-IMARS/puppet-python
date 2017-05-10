@@ -4,8 +4,8 @@ language: ruby
 bundler_args: --without system_tests
 
 before_install:
-  # fix for failed builds suggested by https://github.com/travis-ci/travis-ci/issues/5239
-  - gem install bundler
+  # builds fail w/ newer bundlers
+  - gem install bundler --version "=1.13.6"
   
 rvm:
   - 1.8.7
