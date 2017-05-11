@@ -4,6 +4,7 @@ group :system_tests do
   gem 'serverspec',              :require => false
   gem 'beaker',                  :require => false
   gem 'beaker-rspec',            :require => false
+  gem "beaker-puppet_install_helper", :require => false
 end
 
 if puppetversion = ENV['PUPPET_GEM_VERSION']
