@@ -1,4 +1,5 @@
 require 'beaker-rspec'
+require 'beaker/puppet_install_helper'
 
 UNSUPPORTED_PLATFORMS = [ 'windows' ]
 
