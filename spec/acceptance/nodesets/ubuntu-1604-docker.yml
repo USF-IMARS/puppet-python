@@ -7,6 +7,12 @@ HOSTS:
     docker_image_commands:
       - 'apt-get install -y net-tools wget curl'
       - 'locale-gen en_US.UTF-8'
+      - 'bundle -v'
+      - 'rm Gemfile.lock || true'
+      - 'gem update --system'
+      - 'gem update bundler'
+      - 'gem --version'
+      - 'bundle -v'
     docker_preserve_image: true
 CONFIG:
   type: foss
