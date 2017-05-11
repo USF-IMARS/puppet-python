@@ -7,7 +7,7 @@ unless ENV['RS_PROVISION'] == 'no' or ENV['BEAKER_provision'] == 'no'
     if host.is_pe?
       install_pe
     else
-      install_puppet
+      run_puppet_install_helper
     end
   end
 end
