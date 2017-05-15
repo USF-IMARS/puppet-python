@@ -181,8 +181,9 @@ class python::install {
 
       if $pythondev {
         package { 'python-dev':
-          ensure => $dev_ensure,
-          name   => $pythondev,
+          ensure  => $dev_ensure,
+          name    => $pythondev,
+          require => Package['virtualenv'],  # virtualenv must uninstall first; order doesn't matter when installing.
         }
       }
 
